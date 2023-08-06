@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function Word({ props }) {
-  const [word, setWord] = useState(props.word);
+export default function Word({ word: w }) {
+  const [word, setWord] = useState(w);
   const [isShow, setIsShow] = useState(false);
   const [isDone, setIsDone] = useState(word.isDone);
 
@@ -10,7 +10,8 @@ export default function Word({ props }) {
   }
 
   function toggleDone() {
-    fetch(`http://localhost:3001/words/${word.id}`, {
+    fetch(`http://localhost:3001/words/${word.id}`, 
+    {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
