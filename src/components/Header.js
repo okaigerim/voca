@@ -9,9 +9,9 @@ export default function Header() {
 
       <div className="menu">
         
-        <a href="#x" className="link">
+        <Link to="/create_word" className="link">
           Add a word
-        </a>
+        </Link>
         <a href="#x" className="link">
           Add day
         </a>
